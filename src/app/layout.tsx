@@ -1,10 +1,11 @@
-import './globals.css';
+import React from "react";
 import type {Metadata} from 'next';
 import {Inter} from 'next/font/google';
-import React from "react";
-import {APIOptions, PrimeReactProvider} from "primereact/api";
+import {GlobalProvider} from "@/app/GlobalProvider";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import 'primeicons/primeicons.css';
+import './globals.css';
+
 
 const inter = Inter({subsets: ['latin']});
 
@@ -14,16 +15,10 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
-    const primeReactConfig: Partial<APIOptions> = {
-        inputStyle: 'filled',
-    };
-
     return (
         <html lang="en">
         <body className={inter.className}>
-        <PrimeReactProvider value={primeReactConfig}>
-            {children}
-        </PrimeReactProvider>
+        <GlobalProvider>{children}</GlobalProvider>
         </body>
         </html>
     );

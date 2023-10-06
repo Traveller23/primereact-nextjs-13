@@ -11,8 +11,8 @@ export default function MyComponent() {
     const [value, setValue] = useState('');
     const [date, setDate] = useState<Nullable<Date>>(null);
 
-    // const {inputStyle} = useContext(PrimeReactContext);
-    // console.log(`>>> inputStyle: ${inputStyle}`);
+    const {inputStyle, ripple, changeTheme} = useContext(PrimeReactContext);
+    console.log(`>>> inputStyle: ${inputStyle}, ripple: ${ripple}`);
 
     return (
         <div className="card flex justify-content-center">
