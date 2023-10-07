@@ -15,7 +15,7 @@ export default function MyComponent() {
     console.log(`>>> inputStyle: ${inputStyle}, ripple: ${ripple}`);
 
     return (
-        <div className="card flex justify-content-center">
+        <div className="my-wrapper">
             <Calendar value={date} onChange={(e) => setDate(e.value)}/>
             <InputText value={value} onChange={(e) => setValue(e.target.value)}/>
             <Button label="Submit"/>

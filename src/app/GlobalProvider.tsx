@@ -5,6 +5,7 @@ import {APIOptions, PrimeReactProvider} from 'primereact/api';
 
 export function GlobalProvider({children}: { children: React.ReactNode }) {
     const primeReactConfig: Partial<APIOptions> = {
+        appendTo: 'self',
         inputStyle: 'filled',
         ripple: true,
     };
